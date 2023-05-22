@@ -1,15 +1,17 @@
-package org.example;
+package org.example.controller;
+
+import org.example.dao.Drugs;
 
 import java.util.List;
 import java.util.Scanner;
 
-import static org.example.ListDrugsController.listProducts;
-import static org.example.LoadDrugDaoService.loadInventory;
-import static org.example.SearchDrugsController.searchProducts;
+import static org.example.controller.ListDrugsController.listProducts;
+import static org.example.service.LoadDrugDaoService.loadInventory;
+import static org.example.controller.SearchDrugsController.searchProducts;
 
 public class ConsoleViewController {
 
-    static void control() {
+    public static void control() {
         List<Drugs> drugs = loadInventory();
 
         Scanner scanner = new Scanner(System.in);

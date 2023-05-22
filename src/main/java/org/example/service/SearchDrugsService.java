@@ -1,10 +1,12 @@
-package org.example;
+package org.example.service;
+
+import org.example.dao.Drugs;
 
 import java.util.List;
 
 public class SearchDrugsService {
 
-    static void searchDrugs(List<Drugs> inventory, String parameter, String value, List<Drugs> results) {
+    public static void searchDrugs(List<Drugs> inventory, String parameter, String value, List<Drugs> results) {
         for (Drugs drugs : inventory) {
             switch (parameter) {
                 case "id":
@@ -13,7 +15,7 @@ public class SearchDrugsService {
                     }
                     break;
                 case "name":
-                    if (drugs.getName().toLowerCase().contains(value)) {
+                    if (drugs.getDrugName().toLowerCase().contains(value)) {
                         results.add(drugs);
                     }
                     break;
@@ -23,12 +25,12 @@ public class SearchDrugsService {
                     }
                     break;
                 case "price":
-                    if (drugs.getPrice() == Double.parseDouble(value)) {
+                    if (drugs.getDrugPrice() == Double.parseDouble(value)) {
                         results.add(drugs);
                     }
                     break;
                 case "quantity":
-                    if (drugs.getQuantity() == Integer.parseInt(value)) {
+                    if (drugs.getDrugQuantity() == Integer.parseInt(value)) {
                         results.add(drugs);
                     }
                     break;

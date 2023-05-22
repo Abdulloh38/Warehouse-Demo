@@ -1,10 +1,12 @@
-package org.example;
+package org.example.controller;
+
+import org.example.dao.Drugs;
 
 import java.util.List;
 import java.util.Scanner;
 
-import static org.example.ListDrugsService.listDrug;
-import static org.example.ListDrugsView.printView;
+import static org.example.service.ListDrugsService.listDrug;
+import static org.example.view.ListDrugsView.printView;
 
 public class ListDrugsController {
 

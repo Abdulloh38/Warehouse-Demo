@@ -1,6 +1,6 @@
-package org.example;
+package org.example.view;
 
-import static org.example.ConsoleViewController.control;
+import static org.example.controller.ConsoleViewController.control;
 
 public class ConsoleView {
 

@@ -1,4 +1,6 @@
-package org.example;
+package org.example.service;
+
+import org.example.dao.Drugs;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -9,8 +11,8 @@ public class LoadDrugDaoService {
     public static List<Drugs> loadInventory() {
         List<Drugs> inventory = new ArrayList<>();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/java/org/example/DrugDao.csv"))) {
-            String line = reader.readLine(); // skip header row
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/java/org/example/dao/DrugDao.csv"))) {
+            String line = reader.readLine();
 
             while ((line = reader.readLine()) != null) {
                 String[] fields = line.split(",");
